@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --white-color: #fff;
+}
+
+/* Estilos generales */
+body {
+  font-family: var(--font-base);
+}
+
+/* Estilos de la Sección de Propósito */
+.purpose {
+  text-align: left;
+}
+
+.purpose__title {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.purpose__description {
+  font-family: var(--fonts-secondary);
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Estilos de la Lista de Usuarios */
+.user-list {
+  margin-top: 2rem;
+}
+
+.user-list__title {
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.user-list__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-list__item {
+  flex: 1 1 22%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.user-list__item h5 {
+  margin-bottom: 0.5rem;
+}
+
+.user-list__item p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.user-list__item .btn {
+  margin-top: 0.5rem;
+}
+
+/* Estilos del Formulario */
+.registration-form__title {
+  font-size: 1.5rem;
+  color: #343a40;
+  text-align: center;
+}
+
+.registration-form__form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.registration-form__form .form-group {
+  margin-bottom: 1rem;
+}
+
+/* Modal */
+.modal-body p {
+  font-size: 1.2rem;
+}

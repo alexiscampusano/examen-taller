@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Personal - Empresa de Construcción</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Menú Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Empresa de Construcción</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container my-4">
+      <!-- Sección de Propósito -->
+      <section class="purpose mb-4">
+        <h2 class="purpose__title">Propósito de la Página</h2>
+        <p class="purpose__description">
+          Esta plataforma está diseñada para gestionar el registro de usuarios
+          de nuestra empresa de construcción. Aquí puede agregar, visualizar y
+          eliminar usuarios.
+        </p>
+      </section>
+
+      <!-- Listado de Usuarios -->
+      <section class="user-list mb-4">
+        <h2 class="user-list__title">Listado de Usuarios</h2>
+        <div class="user-list__grid row">
+          <!-- Los usuarios serán agregados aquí dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Formulario de Registro -->
+      <section class="registration-form mb-4">
+        <h2 class="registration-form__title">Registro de Nuevo Usuario</h2>
+        <form id="userForm" class="registration-form__form">
+          <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              name="firstName"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              name="lastName"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="birthDate">Fecha de Nacimiento</label>
+            <input
+              type="date"
+              class="form-control"
+              id="birthDate"
+              name="birthDate"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="position">Cargo</label>
+            <select class="form-control" id="position" name="position">
+              <option value="" disabled selected>Seleccione un cargo</option>
+              <option value="Ingeniero">Ingeniero</option>
+              <option value="Obrero">Obrero</option>
+              <option value="Supervisor">Supervisor</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="joinDate">Fecha de Ingreso</label>
+            <input
+              type="date"
+              class="form-control"
+              id="joinDate"
+              name="joinDate"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">
+              Confirmar Datos
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Cerrar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="confirmationText"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmAddUser">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enlaces a JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
